@@ -1,2 +1,15 @@
 <h1>Foodface</h1>
 <p>Track the food that goes into your face.</p>
+
+<table>
+	<tr>
+		<th>Food</th>
+		<th>Calories</th>
+	</tr>
+	<% for food in @foods %>
+		<tr>
+			<td><%= food.name %></td>
+			<td><%= food.calories %></td>
+		</tr>
+	<% end %>
+</table>
