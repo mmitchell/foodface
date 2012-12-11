@@ -1,7 +1,6 @@
 %h1 Foodface
 %p Track the food that goes into your face.
 
-
 = form_for @new_food do |f|
   = f.label :name
   = f.text_field :name
@@ -9,6 +8,10 @@
   = f.text_field :calories
   = f.submit "Save"
 
+
+%p
+  Total calories today:
+  = @foods.inject(0){|sum,f| sum + f.calories}
 
 %table
   %tr

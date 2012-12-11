@@ -6,4 +6,5 @@ class Food < ActiveRecord::Base
       :conditions => ["created_at >= ?", Time.now.beginning_of_day]
     }
   }
+  
 end
