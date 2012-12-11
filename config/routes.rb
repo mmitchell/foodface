@@ -1,5 +1,7 @@
 Foodface::Application.routes.draw do
-  
+
+  resource :foods
+
   root :to => 'welcome#index'
 
   # The priority is based upon order of creation:
