@@ -1,23 +1,26 @@
-%h1 Foodface
-%p Track the food that goes into your face.
+.row
+  .span4.offset4
+    %h1 Foodface
+    %p Track the food that goes into your face.
 
-= form_for @new_food do |f|
-  = f.label :name
-  = f.text_field :name
-  = f.label :calories
-  = f.text_field :calories
-  = f.submit "Save"
+    = form_for @new_food do |f|
+      = f.label :name
+      = f.text_field :name
+      = f.label :calories
+      = f.text_field :calories
+      = f.submit "Save"
 
-
-%p
-  Total calories today:
-  = @foods.inject(0){|sum,f| sum + f.calories}
-
-%table
-  %tr
-    %th Food
-    %th Calories
-  - for food in @foods
-    %tr
-      %td= food.name
-      %td= food.calories
+    %table.table.table-striped
+      %caption
+        %h4
+          Total today:
+          = @foods.inject(0){|sum,f| sum + f.calories}
+      %thead
+        %tr
+          %th Food
+          %th Calories
+      %tbody
+        - for food in @foods
+          %tr
+            %td= food.name
+            %td= food.calories
