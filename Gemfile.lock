@@ -74,6 +74,7 @@ GEM
     method_source (0.8.1)
     mime-types (1.19)
     multi_json (1.5.0)
+    newrelic_rpm (3.5.3.25)
     pg (0.14.1)
     polyglot (0.3.3)
     pry (0.9.10)
@@ -139,6 +140,7 @@ DEPENDENCIES
   gon
   haml
   jquery-rails
+  newrelic_rpm
   pg
   pry-rails
   rails (= 3.2.8)
