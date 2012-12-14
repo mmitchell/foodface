@@ -9,6 +9,7 @@ gem 'pg'
 gem 'haml'
 gem 'bootstrap-sass', '~> 2.2.1.1'
 gem 'pry-rails'
+gem 'by_star', :git => "git://github.com/radar/by_star"
 
 group :development do
   gem "better_errors"
