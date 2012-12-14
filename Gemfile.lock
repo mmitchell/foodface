@@ -56,6 +56,9 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    gon (4.0.1)
+      actionpack (>= 2.3.0)
+      json
     haml (3.1.6)
     hike (1.2.1)
     i18n (0.6.1)
@@ -133,6 +136,7 @@ DEPENDENCIES
   bootstrap-sass (~> 2.2.1.1)
   by_star!
   coffee-rails (~> 3.2.1)
+  gon
   haml
   jquery-rails
   pg
