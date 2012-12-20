@@ -32,8 +32,6 @@ $(function () {
                     point: {
                         events: {
                             click: function() {
-                                console.log(this);
-                                alert('stopper');
                                 document.location.href = '/daysago/' + (14 - this.x);
                             }
                         }
