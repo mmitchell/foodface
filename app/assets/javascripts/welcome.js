@@ -27,6 +27,19 @@ $(function () {
                     return this.y + " Cal.";
                 }
             },
+            plotOptions: {
+                series: {
+                    point: {
+                        events: {
+                            click: function() {
+                                console.log(this);
+                                alert('stopper');
+                                document.location.href = '/daysago/' + (14 - this.x);
+                            }
+                        }
+                    }
+                }
+            },
             series: [{
             	showInLegend: false,
                 data: gon.past_calorie_data[0]

@@ -1,0 +1,19 @@
+.row
+  .span4.offset4
+    %h1 Foodface
+    %p Track the food that goes into your face.
+
+    %table.table.table-striped
+      %caption
+        %h4
+          Total today:
+          = @foods.sum(&:calories)
+      %thead
+        %tr
+          %th Food
+          %th Calories
+      %tbody
+        - for food in @foods
+          %tr
+            %td= food.name
+            %td= food.calories
