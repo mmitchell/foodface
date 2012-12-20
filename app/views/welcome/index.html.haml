@@ -1,8 +1,5 @@
 .row
   .span4.offset4
-    %h1 Foodface
-    %p Track the food that goes into your face.
-
     = form_for @new_food, :html => { :class => "form-inline"} do |f|
       = f.text_field :name, :class => "input-medium", :placeholder => "Food"
       = f.text_field :calories, :class => "input-mini", :placeholder => "Calories"
