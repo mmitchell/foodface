@@ -11,6 +11,7 @@
     .container
       .row
         .span4.offset4
-          %h1 Foodface
+          %a{:href => "/", :style => "text-decoration: none;"}
+            %h1 Foodface
           %p Track the food that goes into your face.
       = yield
