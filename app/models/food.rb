@@ -1,5 +1,7 @@
 class Food < ActiveRecord::Base
   attr_accessible :calories, :name
+  validates :name, :presence => true
+  validates :calories, :numericality => { :only_integer => true, :greater_than => 100 }
 
   def self.past_day_totals(number_of_days = 1)
     a =(1..number_of_days).inject([[nil],[nil]]) do |arr, idx|
