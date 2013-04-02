@@ -11,11 +11,11 @@
           = f.submit "Save"
     -else
       %center
-        %h3
+        %h3.weight-total
           = "#{@weight.weight} lb"
     %table.table.table-striped
       %caption
-        %h4
+        %h4.calorie-total
           Total today:
           = "#{@foods.sum(&:calories)} cal"
       %thead
@@ -28,4 +28,4 @@
             %td= food.name
             %td= food.calories
   .span8.offset2
-    #container{:style => "min-width: 600px; height: 200px; margin: 0 auto"}
+    #container{:style => "min-width: 600px; height: 270px; margin: 0 auto"}

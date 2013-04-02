@@ -2,9 +2,11 @@
   .span4.offset4
     %table.table.table-striped
       %caption
-        %h4
+        %h3.weight-total
+          = "#{@weight.try(:weight)} lb"
+        %h4.calorie-total
           Total today:
-          = @foods.sum(&:calories)
+          = "#{@foods.sum(&:calories)} cals"
       %thead
         %tr
           %th Food
