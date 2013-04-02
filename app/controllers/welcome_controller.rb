@@ -3,6 +3,7 @@ class WelcomeController < ApplicationController
     @new_food = Food.new
     @new_weight = Weight.new
     @foods = Food.today.order("created_at desc").all
+    @weight = Weight.today.first
     gon.past_calorie_data = Food.past_day_totals(14)
   end
 

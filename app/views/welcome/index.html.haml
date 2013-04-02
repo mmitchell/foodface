@@ -4,14 +4,20 @@
       = f.text_field :name, :class => "input-medium", :placeholder => "Food"
       = f.text_field :calories, :class => "input-mini", :placeholder => "Calories"
       = f.submit "Save"
-    = form_for @new_weight, :html => { :class => "form-inline"} do |f|
-      = f.text_field :weight, :class => "input-medium", :placeholder => "Weight"
-      = f.submit "Save"
+    -if @weight.nil?
+      %center
+        = form_for @new_weight, :html => { :class => "form-inline"} do |f|
+          = f.text_field :weight, :class => "input-medium", :placeholder => "Weight"
+          = f.submit "Save"
+    -else
+      %center
+        %h3
+          = "#{@weight.weight} lb"
     %table.table.table-striped
       %caption
         %h4
           Total today:
-          = @foods.sum(&:calories)
+          = "#{@foods.sum(&:calories)} cal"
       %thead
         %tr
           %th Food
