@@ -1,6 +1,7 @@
 Foodface::Application.routes.draw do
 
   resource :foods
+  resource :weights
   match '/daysago/:day' => "welcome#show"
   root :to => 'welcome#index'
 
