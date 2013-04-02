@@ -1,0 +1,5 @@
+.row
+  -flash.each do |type, message|
+    .alert{:class => twitterized_type(type)}
+      %button.close{"data-dismiss" => "alert"} ×
+      = message

@@ -14,4 +14,5 @@
           %a{:href => "/", :style => "text-decoration: none;"}
             %h1 Foodface
           %p Track the food that goes into your face.
+          = render :partial => "layouts/flash", :locals => {:flash => flash}
       = yield
