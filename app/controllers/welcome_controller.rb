@@ -4,8 +4,8 @@ class WelcomeController < ApplicationController
     @new_weight = Weight.new
     @foods = Food.today.order("created_at desc").all
     @weight = Weight.today.first
-    gon.past_calorie_data = Food.past_day_totals(14)
-    gon.past_weight_data = Weight.past_day_totals(14)
+    gon.past_calorie_data = past_day_totals(14){ |idx| Food.by_day(idx.days.ago).sum(:calories) }
+    gon.past_weight_data = past_day_totals(14){ |idx| Weight.by_day(idx.days.ago).sum(:weight) }
   end
 
   def show

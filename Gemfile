@@ -8,7 +8,6 @@ gem 'rails', '3.2.11'
 gem 'pg'
 gem 'haml'
 gem 'bootstrap-sass', '~> 2.2.1.1'
-gem 'pry-rails'
 gem 'by_star', :git => "git://github.com/radar/by_star"
 gem 'gon'
 gem 'newrelic_rpm'
@@ -16,6 +15,9 @@ gem 'newrelic_rpm'
 group :development do
   gem "better_errors"
   gem "binding_of_caller"
+  gem 'pry-rails'
+  gem 'pry-remote'
+  gem 'pry-nav'
 end
 
 # Gems used only for assets and not required

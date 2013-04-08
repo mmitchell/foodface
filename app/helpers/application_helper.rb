@@ -13,4 +13,5 @@ module ApplicationHelper
         type.to_s
     end
   end
+
 end
